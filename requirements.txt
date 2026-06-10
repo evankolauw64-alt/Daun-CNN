@@ -1,0 +1,9 @@
+pandas
+scikit-learn
+matplotlib
+numpy
+streamlit
+Pillow
+tensorflow
+keras
+h5py

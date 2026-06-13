@@ -65,7 +65,7 @@ if uploaded_file is not None:
         class_list = ['Alpukat', 'Gersen', 'Jambu', 'Jeruk_Nipis', 'Kelengkeng', 'Mangga', 'Mulbery', 'Nangka', 'Pepaya', 'Pisang', 'Rambutan', 'Semangka', 'Singkong', 'Sirih']
         predicted_class = class_list[predicted_class_index]
 
-        # 4. Check if the prediction is confident enough
+        # 4. Check if the prediction is confident enoughss
         threshold = 0.8  # Define a confidence threshold (adjustable)  
         
         if max_prob < threshold:

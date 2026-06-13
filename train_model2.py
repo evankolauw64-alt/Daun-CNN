@@ -76,6 +76,20 @@ train_datagen = ImageDataGenerator(
 
 val_datagen = ImageDataGenerator(rescale=1./255)
 
+<<<<<<< HEAD
+        # 4. Check if the prediction is confident enoughss
+        threshold = 0.8  # Define a confidence threshold (adjustable)  
+        
+        if max_prob < threshold:
+            st.warning("Gambar yang diunggah bukan gambar yang terdeteksi secara akurat oleh sistem. Harap unggah gambar daun yang relevan dan lebih jelas.")
+        else:
+            # Mengganti underscore dengan spasi khusus untuk tampilan di layar agar lebih rapi (misal: Jeruk_Nipis -> Jeruk Nipis)
+            display_name = predicted_class.replace('_', ' ')
+            
+            # Display the predicted class
+            st.success(f"**Predicted class:** {display_name}")
+            st.info(f"Tingkat Keyakinan: {max_prob * 100:.2f}%")
+=======
 train_generator = train_datagen.flow_from_directory(
     train_dir,
     target_size=(150, 150),
@@ -83,6 +97,7 @@ train_generator = train_datagen.flow_from_directory(
     class_mode='categorical',
     classes=classes
 )
+>>>>>>> c027bc5c980af28d7daa1f642dd54239375d302a
 
 val_generator = val_datagen.flow_from_directory(
     validation_dir,

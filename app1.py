@@ -56,7 +56,7 @@ if uploaded_file is not None:
         img_array = np.expand_dims(img_array, axis=0)  # Add an extra dimension for batch
         img_array = img_array / 255.0  # Normalize the image data
 
-        # 3. Make prediction
+        # 3. Make predictions
         prediction = model.predict(img_array)
         max_prob = np.max(prediction)  # Get the highest probability
         predicted_class_index = np.argmax(prediction)
@@ -65,7 +65,7 @@ if uploaded_file is not None:
         class_list = ['Alpukat', 'Gersen', 'Jambu', 'Jeruk_Nipis', 'Kelengkeng', 'Mangga', 'Mulbery', 'Nangka', 'Pepaya', 'Pisang', 'Rambutan', 'Semangka', 'Singkong', 'Sirih']
         predicted_class = class_list[predicted_class_index]
 
-        # 4. Check if the prediction is confident enoughss
+        # 4. Check if the prediction is confident enough
         threshold = 0.8  # Define a confidence threshold (adjustable)  
         
         if max_prob < threshold:
